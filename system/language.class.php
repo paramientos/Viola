@@ -16,7 +16,7 @@ class Language
                 error("no_language_key", $key);
             }
         } else {
-            error("no_clanguage_file", $key);
+            error("no_language_file", $key);
         }
 
     }

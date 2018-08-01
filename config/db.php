@@ -2,18 +2,18 @@
 
 
 
-$_ = array(
+$_ = [
 
     'type' => 'mysqli',
 
     'host' => 'localhost',
 
-    'user' => 'root',
+    'user' => "",
 
     'pass' => '1',
 
     'db' => 'locman',
 
-);
+];
 
 

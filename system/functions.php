@@ -72,6 +72,7 @@ function error($msg, $args = null)
 {
 
     $e = new E();
-    echo $e->$msg($args) . '<br>';
+    echo $e->call($msg, $args) . '<br>';
+    exit;
 
 }

@@ -2,7 +2,7 @@
 
 
 
-$_ = array(
+$_ = [
 
     'url' => 'http://localhost/viola',
 
@@ -14,7 +14,7 @@ $_ = array(
 
     'key' => '',
 
-    'language'  =>  'tr',
+    'language' =>  'tr',
 
-);
+];
 

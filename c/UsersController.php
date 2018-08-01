@@ -45,7 +45,7 @@ class UsersController
         echo json_encode($result);
         //var_dump(Request::get_full_url());
 
-        //echo Language::get("title");
+        //echo language::get("title");
 
         //$db->query("");
         //echo $id;

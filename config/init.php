@@ -1,11 +1,10 @@
 <?php
 
 
-$_ = array(
-    'helpers' => array(
-        'Language',
+$_ = [
+    'helpers' => [
         'Session',
         'Request'
-    )
+    ]
 
-);
+];
