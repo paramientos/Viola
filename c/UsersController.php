@@ -28,7 +28,7 @@ class UsersController
              var_dump($q->rows);
          }*/
 
-        helper("validate");
+        helper("validates");
         $rules = [
             "name" => "required|string",
             "age" => "numeric",

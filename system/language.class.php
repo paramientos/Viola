@@ -16,7 +16,8 @@ class Language
                 error("no_language_key", $key);
             }
         } else {
-            error("no_language_file", $key);
+            //error("no_language_file", $key);
+            echo "NO <b>$current_lang</b> LANGUAGE FILE at " . ROOT . DS . 'lang' . DS;
         }
 
     }
