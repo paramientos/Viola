@@ -23,10 +23,29 @@ class UsersController
         //$db = db();
         //$db->query("select * from users");
 
-        $q=db()->query("select * from users");
-        if ($q->num_rows) {
-            var_dump($q->rows);
-        }
+        /* $q=db()->query("select * from users");
+         if ($q->num_rows) {
+             var_dump($q->rows);
+         }*/
+
+        helper("validate");
+        $rules = [
+            "name" => "required|string",
+            "age" => "numeric",
+            "consent" => "required_without:age"
+        ];
+
+        // Aliases for request parameters with special characters
+        $aliases = [
+            "name" => "Full Name"
+        ];
+
+        // Will either be true for success, or an array of error messages
+        $result = Validate::validateGet($rules, $aliases);
+        echo json_encode($result);
+        //var_dump(Request::get_full_url());
+
+        //echo Language::get("title");
 
         //$db->query("");
         //echo $id;

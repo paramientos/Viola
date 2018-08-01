@@ -2,7 +2,7 @@
 
 
 
-$config = array(
+$_ = array(
 
     'type' => 'mysqli',
 

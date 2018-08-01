@@ -1,9 +1,9 @@
 <?php
 
-namespace lang;
 
-return array(
-    'no_route' => "Route bulunamadı"
+$_ = array(
+    'no_route' => "Route bulunamadı",
+    'title' => 'Başlık',
 );
 
 

@@ -31,15 +31,15 @@ function helper($helpers)
 
     if (is_array($helpers_array)) {
         foreach ($helpers_array as $helper) {
-            if (file_exists(ROOT . DS . 'helper' . DS . $helper . '.php')) {
-                include_once ROOT . DS . 'helper' . DS . $helper . '.php';
+            if (file_exists(ROOT . DS . 'helper' . DS . ucfirst($helper) . '.php')) {
+                include_once ROOT . DS . 'helper' . DS . ucfirst($helper) . '.php';
             } else {
                 error("no_helper_file", $helper);
             }
         }
     } else {
-        if (file_exists(ROOT . DS . 'helper' . DS . $helpers . '.php')) {
-            include_once ROOT . DS . 'helper' . DS . $helpers . '.php';
+        if (file_exists(ROOT . DS . 'helper' . DS . ucfirst($helpers) . '.php')) {
+            include_once ROOT . DS . 'helper' . DS . ucfirst($helpers) . '.php';
         } else {
             error("no_helper_file", $helpers);
         }
@@ -54,9 +54,10 @@ function config($config)
     $config_file = $exp[0];
     $config_key = $exp[1];
     if (file_exists(ROOT . DS . 'config' . DS . $config_file . '.php')) {
+        $_ = array();
         include ROOT . DS . 'config' . DS . $config_file . '.php';
-        if (array_key_exists($config_key, $config)) {
-            return $config[$config_key];
+        if (array_key_exists($config_key, $_)) {
+            return $_[$config_key];
         } else {
             error("no_config_key", $config_key);
         }

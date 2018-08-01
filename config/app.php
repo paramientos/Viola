@@ -2,7 +2,7 @@
 
 
 
-return $config = array(
+$_ = array(
 
     'url' => 'http://localhost/viola',
 
@@ -13,6 +13,8 @@ return $config = array(
     'version' => '1.0',
 
     'key' => '',
+
+    'language'  =>  'tr',
 
 );
 

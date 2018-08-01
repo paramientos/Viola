@@ -15,6 +15,13 @@ include_once ROOT . DS . "system" . DS . "functions.php";
 /*****************************************************************/
 
 
+if (is_array(config("init.helpers"))) {
+    foreach (config("init.helpers") as $helper) {
+        helper($helper);
+    }
+}
+
+
 $parse_url = parse_url($_SERVER['REQUEST_URI']);
 $url = $parse_url['path'];
 
