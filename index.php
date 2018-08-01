@@ -1,5 +1,6 @@
 <?php
 
+
 ini_set("always_populate_raw_post_data", -1);
 
 
@@ -9,7 +10,8 @@ define("ROOT", realpath(dirname(__FILE__)));
 
 /************* system classes ********************************************/
 include_once ROOT . DS . "system" . DS . "routes.class.php";
-
+include_once ROOT . DS . "system" . DS . "e.class.php";
+include_once ROOT . DS . "system" . DS . "functions.php";
 /*****************************************************************/
 
 
@@ -28,3 +30,4 @@ include_once ROOT . DS . "routes.php";
 /*****************************************************************/
 
 
+?>
