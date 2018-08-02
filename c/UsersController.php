@@ -28,7 +28,11 @@ class UsersController
              var_dump($q->rows);
          }*/
 
-        helper("validates");
+       var_dump(Auth::logged());
+
+
+
+        /*helper("validate");
         $rules = [
             "name" => "required|string",
             "age" => "numeric",
@@ -42,7 +46,7 @@ class UsersController
 
         // Will either be true for success, or an array of error messages
         $result = Validate::validateGet($rules, $aliases);
-        echo json_encode($result);
+        echo json_encode($result);*/
         //var_dump(Request::get_full_url());
 
         //echo language::get("title");

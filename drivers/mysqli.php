@@ -45,6 +45,11 @@ class db_mysqli
         }
     }
 
+    public function debug($sql)
+    {
+        echo $sql;
+    }
+
     public function escape($value)
     {
         return $this->link->real_escape_string($value);

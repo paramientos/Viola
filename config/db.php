@@ -8,7 +8,7 @@ $_ = [
 
     'host' => 'localhost',
 
-    'user' => "",
+    'user' => "root",
 
     'pass' => '1',
 

@@ -4,7 +4,8 @@
 $_ = [
     'helpers' => [
         'Session',
-        'Request'
+        'Request',
+        'Auth'
     ]
 
 ];

@@ -7,7 +7,11 @@ class Session
     public static function get($key)
     {
         $sess = new Sessionx();
-        return $sess->data[$key];
+        if (array_key_exists($key, $sess->data)) {
+            return $sess->data[$key];
+        } else {
+            return false;
+        }
 
     }
 
